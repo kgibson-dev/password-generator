@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<header>
+			<div>
+				<h1>Generate a </h1>
+				<h1 id="green-h1">random password</h1>
+			</div>
+			<div id="never">
+				<h2>Never use an insecure password again.</h2>
+			</div>
+			
+		</header>
+		<main>
+			<div class="pwdOptions">
+				<label for="input-el">Password Length</label>
+				<input id="input-el" type="number" />
+				
+				<p id="pwdError-el"></p>
+			</div>
+			<div class="pwdOptions">
+				<input type="checkbox" id="numbers-el" name="numbers" checked value="">
+				<label for="numbers-el">Include numbers</label>
+			</div>
+			<div class="pwdOptions">
+				<input type="checkbox" id="symbols-el" name="symbols" checked value="">
+				<label for="symbols-el">Include symbols</label>
+			</div>
+			<div>
+				<button onclick="renderPasswords()">Generate Passwords</button>
+			</div>
+		</main>
+		
+        <section>
+            <div class="passwd-box">
+                <p id="password1-el"></p>
+            </div>
+            <div class="passwd-box">
+                <p id="password2-el"></p>
+            </div>
+    	</section>
+		<script src="index.js"></script>
+	</body>
+</html>
