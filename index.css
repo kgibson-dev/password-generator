@@ -4,13 +4,15 @@
 
 body {
     margin: 0;
-    width: 550px;
+    max-width: 550px;
     height: 550px;
     background: #1F2937;
     font-family: 'Inter', sans-serif;
     color: white;
     font-weight: 400;
-    margin-left: 60px;
+    width: 92%;
+    margin: 0 auto;
+    /* margin-left: 60px; */
 }
 header {
     display: flex;
@@ -22,10 +24,12 @@ h1 {
     font-family: 'Karla', sans-serif;
     font-weight: 800;
     font-size: 40px;
+    margin-bottom: 0px;
 }
 
 #green-h1 {
-    color: #4ADF86
+    color: #4ADF86;
+    margin-top: 0px;
 }
 
 #never {
@@ -74,6 +78,8 @@ section {
     justify-content: space-between;
     margin-top: 30px;
     max-width: 450px;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 .passwd-box {
     width: 210px;
