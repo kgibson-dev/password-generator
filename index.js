@@ -86,13 +86,13 @@ const letters = [
 	'z',
 ];
 
-let password1El = document.getElementById("password1-el")
-let password2El = document.getElementById('password2-el');
-let passwdLengthEl = document.getElementById('input-el')
-let pwdErrorEl = document.getElementById('pwdError-el');
+const password1El = document.getElementById("password1-el")
+const password2El = document.getElementById('password2-el');
+const passwdLengthEl = document.getElementById('input-el')
+const pwdErrorEl = document.getElementById('pwdError-el');
 
-let numCheckboxEl = document.getElementById('numbers-el');
-let symbolsCheckboxEl = document.getElementById('symbols-el');
+const numCheckboxEl = document.getElementById('numbers-el');
+const symbolsCheckboxEl = document.getElementById('symbols-el');
 
 
 // Set password length input box attributes
@@ -106,15 +106,12 @@ function getRandomChar() {
 };
 
 function combineArrays() {
-	characters = [];
-	if (numCheckboxEl.checked && symbolsCheckboxEl.checked === false) {
-		characters = letters.concat(numbers);
-	} else if (symbolsCheckboxEl.checked && numCheckboxEl.checked === false) {
-		characters = letters.concat(symbols);
-	} else if (numCheckboxEl.checked && symbolsCheckboxEl.checked) {
-		characters = letters.concat(numbers, symbols);
-	} else if (symbolsCheckboxEl.checked === false && numCheckboxEl.checked === false) {
-		characters = letters;
+	characters = [...letters];  // Use array spread syntax to include each item in the array
+	if (numCheckboxEl.checked) {
+		characters.push(...numbers)
+	}
+	if (symbolsCheckboxEl.checked) {
+		characters.push(...symbols);
 	}
 }
 
